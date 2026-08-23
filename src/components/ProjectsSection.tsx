@@ -49,7 +49,7 @@ const ProjectsSection = () => {
 
         <div className="mt-10">
           <a
-            href="https://github.com/heredaniyal"
+            href="https://github.com/daniyalsaqib"
             target="_blank"
             rel="noreferrer"
             className="btn-secondary"

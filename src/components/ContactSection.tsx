@@ -24,7 +24,7 @@ const ContactSection = () => {
             WhatsApp
           </a>
           <a
-            href="mailto:hello@daniyalsaqib.me"
+            href="mailto:daniyalsaqib04@gmail.com"
             className="btn-secondary w-full justify-center"
           >
             Email
