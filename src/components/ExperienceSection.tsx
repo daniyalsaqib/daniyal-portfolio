@@ -6,7 +6,7 @@ const jobs = [
     company: 'Allied Bank Limited (ABL)',
     location: 'Lahore, Pakistan',
     period: 'Aug 2026 – Sep 2026',
-    current: true,
+    current: false,
     stack: ['Agentic AI', 'Python', 'State Machines', 'C++', 'Banking IT'],
     bullets: [
       'Authored the Software Requirements & Design Specification (SRDS) and engineered the ABL Outreach & Fraud Operations Suite — an agentic system featuring an autonomous Transaction Fraud Flagging Agent, Cold Outreach Agent, and a deterministic Charity Consent State Machine.',

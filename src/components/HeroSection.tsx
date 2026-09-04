@@ -28,6 +28,8 @@ const HeroSection = () => {
         <div className="text-xl sm:text-2xl md:text-3xl font-medium text-foreground/90 mb-6 flex flex-wrap items-center gap-x-3 gap-y-1">
           <span className="text-gold font-semibold">Full Stack &amp; AI Engineer</span>
           <span className="text-muted hidden sm:inline">/</span>
+          <span className="text-foreground/75 text-lg sm:text-2xl">Ex-IT Intern, Allied Bank</span>
+          <span className="text-muted hidden sm:inline">/</span>
           <span className="text-foreground/75 text-lg sm:text-2xl">Ex-COO, Axiolink Systems</span>
           <span className="text-muted hidden sm:inline">/</span>
           <span className="text-foreground/60 text-base sm:text-xl">CS @ UMT</span>
@@ -84,7 +86,7 @@ const HeroSection = () => {
             <span className="hidden sm:inline">LinkedIn</span>
           </a>
           <a
-            href="mailto:daniyalsaqib04@gmail.com"
+            href="mailto:daniyalsaqib70@gmail.com"
             className="hover:text-gold transition-colors flex items-center gap-1.5"
             aria-label="Send Email"
           >

@@ -21,7 +21,7 @@ const projects: Project[] = [
     description:
       'Authored the complete Software Requirements & Design Specification (SRDS) and built a layered multi-agent banking system: a Transaction Fraud Flagging Agent with plain-language explainability, a Cold Email Outreach Agent, and an Automated Charity Consent Workflow Agent enforcing a deterministic 5-state machine with bounded retries and an immutable audit trail.',
     stack: ['Python', 'FastAPI', 'Agentic Workflows', 'State Machine', 'Audit Logging', 'Synthetic Data'],
-    repoUrl: 'https://github.com/daniyalsaqib',
+    repoUrl: 'https://github.com/daniyalsaqib/ablinternship-fall-2026',
     specUrl: '/ABL_Outreach_and_Fraud_Operations_Suite_Spec.pdf',
     icon: ShieldAlert,
   },
@@ -33,7 +33,7 @@ const projects: Project[] = [
     description:
       'Multi-agent pipeline engineered for retail banking intelligence: automated account statement Q&A, recurring subscription and fee anomaly detection, and institutional policy retrieval grounded in official banking guidelines with verifiable source citations.',
     stack: ['Python', 'FastAPI', 'RAG', 'Groq API', 'Vector Search'],
-    repoUrl: 'https://github.com/daniyalsaqib',
+    repoUrl: 'https://github.com/daniyalsaqib/Statement_Intelligence_Suite_ABL',
     icon: Sparkles,
   },
   {
@@ -44,7 +44,7 @@ const projects: Project[] = [
     description:
       'Map-based contact intelligence and relationship management system for organizing, indexing, and surfacing a 1,300+ professional network based on real-time geographic proximity, company clusters, and industry tags.',
     stack: ['Next.js', 'PostgreSQL', 'Leaflet', 'TypeScript', 'TailwindCSS'],
-    repoUrl: 'https://github.com/daniyalsaqib',
+    repoUrl: 'https://github.com/daniyalsaqib/networking-crm',
     icon: Map,
   },
   {
@@ -55,7 +55,7 @@ const projects: Project[] = [
     description:
       'Engineered with Team Panic Pointers at FAST-NU Lahore under a 6-hour sprint. Classifies incoming opportunity emails, extracts key structured fields with LLM pipelines, and computes personalized priority rankings for executives.',
     stack: ['Streamlit', 'Python', 'FastAPI', 'Groq API', 'NLP'],
-    repoUrl: 'https://github.com/daniyalsaqib',
+    repoUrl: 'https://github.com/nihaal237/SOFTEC2026-AIHackathon-OpportunityInboxCopilot',
     icon: MailCheck,
   },
   {
@@ -66,7 +66,7 @@ const projects: Project[] = [
     description:
       'Console-based banking operations menu engineered as an onboarding technical assignment within Allied Bank’s 4th IT Group, simulating transaction routing, balance validations, and ledger updates with low-level data structures.',
     stack: ['C++', 'OOP', 'Data Structures', 'Memory Management'],
-    repoUrl: 'https://github.com/daniyalsaqib',
+    repoUrl: 'https://github.com/daniyalsaqib/ablinternship-fall-2026/blob/main/Sir%20Affan/banking.cpp',
     icon: Terminal,
   },
   {
@@ -77,7 +77,7 @@ const projects: Project[] = [
     description:
       'Atmospheric horror game prototype featuring custom C# creature behavior logic, spatial sound triggers, and collision detection systems built with two teammates for an elective in Game Development.',
     stack: ['C#', 'Unity 3D', 'AI State Machines', 'Collision Logic'],
-    repoUrl: 'https://github.com/daniyalsaqib',
+    repoUrl: 'https://github.com/daniyalsaqib/PatientZero_Prototype',
     icon: Gamepad2,
   },
 ];

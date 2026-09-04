@@ -3,7 +3,7 @@ import { Mail, MessageSquare, Phone, Copy, Check, Linkedin, Github, FileDown } f
 
 const ContactSection = () => {
   const [copied, setCopied] = useState(false);
-  const email = 'daniyalsaqib04@gmail.com';
+  const email = 'daniyalsaqib70@gmail.com';
   const phone = '+92 330 8068062';
 
   const handleCopyEmail = () => {
