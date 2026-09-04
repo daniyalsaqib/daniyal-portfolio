@@ -55,7 +55,7 @@ const projects: Project[] = [
     description:
       'Engineered with Team Panic Pointers at FAST-NU Lahore under a 6-hour sprint. Classifies incoming opportunity emails, extracts key structured fields with LLM pipelines, and computes personalized priority rankings for executives.',
     stack: ['Streamlit', 'Python', 'FastAPI', 'Groq API', 'NLP'],
-    repoUrl: 'https://github.com/nihaal237/SOFTEC2026-AIHackathon-OpportunityInboxCopilot',
+    repoUrl: 'https://github.com/frdnu/SOFTEC-AI-HACKATHON-2026',
     icon: MailCheck,
   },
   {
