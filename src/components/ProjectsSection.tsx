@@ -21,7 +21,7 @@ const projects: Project[] = [
     description:
       'Authored the complete Software Requirements & Design Specification (SRDS) and built a layered multi-agent banking system: a Transaction Fraud Flagging Agent with plain-language explainability, a Cold Email Outreach Agent, and an Automated Charity Consent Workflow Agent enforcing a deterministic 5-state machine with bounded retries and an immutable audit trail.',
     stack: ['Python', 'FastAPI', 'Agentic Workflows', 'State Machine', 'Audit Logging', 'Synthetic Data'],
-    repoUrl: 'https://github.com/daniyalsaqib/ablinternship-fall-2026',
+    repoUrl: 'https://github.com/daniyalsaqib/Outreach_Fraud_Charity_Suite_ABL',
     specUrl: '/ABL_Outreach_and_Fraud_Operations_Suite_Spec.pdf',
     icon: ShieldAlert,
   },
