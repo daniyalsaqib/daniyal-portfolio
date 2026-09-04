@@ -7,13 +7,14 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-background text-foreground font-body antialiased;
+    @apply bg-background text-foreground font-body antialiased selection:bg-gold/30 selection:text-gold-light;
+    background-image: 
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(201, 168, 76, 0.08), transparent 70%),
+      radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.02) 1px, transparent 0);
+    background-size: 100% 100%, 32px 32px;
   }
-  h1, h2, h3, h4 {
+  h1, h2, h3, h4, h5, h6 {
     @apply font-display;
-  }
-  ::selection {
-    @apply bg-gold/30 text-gold-light;
   }
   :focus-visible {
     outline: 2px solid #c9a84c;
@@ -23,25 +24,31 @@
 
 @layer components {
   .eyebrow {
-    @apply text-xs tracking-[0.2em] uppercase text-gold font-medium;
+    @apply text-xs tracking-[0.2em] uppercase text-gold font-medium flex items-center gap-2;
   }
   .rule {
-    @apply w-10 h-px bg-gold mt-3 mb-6;
+    @apply w-12 h-[2px] bg-gradient-to-r from-gold to-gold/20 mt-3 mb-6;
   }
   .card {
-    @apply bg-surface border border-border rounded-sm transition-shadow duration-300;
+    @apply bg-surface/90 backdrop-blur-sm border border-border rounded-lg transition-all duration-300;
   }
   .card:hover {
-    @apply shadow-gold-ring;
+    @apply border-gold/40 shadow-[0_4px_24px_rgba(201,168,76,0.12)] -translate-y-0.5;
   }
   .tag {
-    @apply inline-block text-sm px-3 py-1.5 rounded-sm border border-border bg-surface text-foreground/80;
+    @apply inline-flex items-center text-xs px-2.5 py-1 rounded-md border border-border/80 bg-surface/80 text-foreground/80 transition-colors duration-200;
+  }
+  .tag:hover {
+    @apply border-gold/40 text-gold-light;
   }
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-gold text-background font-medium px-6 py-3 rounded-sm hover:bg-gold-light transition-colors duration-200;
+    @apply inline-flex items-center justify-center gap-2 bg-gold text-background font-semibold px-5 py-2.5 rounded-md hover:bg-gold-light shadow-[0_0_20px_rgba(201,168,76,0.25)] transition-all duration-200 active:scale-[0.98];
   }
   .btn-secondary {
-    @apply inline-flex items-center gap-2 border border-border text-foreground font-medium px-6 py-3 rounded-sm hover:border-gold transition-colors duration-200;
+    @apply inline-flex items-center justify-center gap-2 border border-border text-foreground font-medium px-5 py-2.5 rounded-md hover:border-gold/60 hover:bg-gold/5 transition-all duration-200 active:scale-[0.98];
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 text-foreground/80 hover:text-gold transition-colors duration-200 text-sm;
   }
 }
 
