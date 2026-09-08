@@ -2,57 +2,67 @@ import { Code2, Globe, Database, Cpu } from 'lucide-react';
 
 const groups = [
   {
-    label: 'Languages',
+    label: 'Core Languages',
     icon: Code2,
-    items: ['JavaScript (ES6+)', 'Python', 'C++', 'Java', 'C#', 'SQL'],
+    items: ['Python', 'JavaScript (ES6+)', 'TypeScript', 'C++', 'Java', 'C#', 'SQL'],
   },
   {
-    label: 'Web & AI Technologies',
+    label: 'Web & AI Frameworks',
     icon: Globe,
-    items: ['React', 'Next.js', 'FastAPI', 'Streamlit', 'Node.js', 'HTML5/CSS3'],
+    items: ['React', 'Next.js', 'FastAPI', 'Streamlit', 'Node.js', 'TailwindCSS'],
   },
   {
-    label: 'Databases & Tools',
+    label: 'Data & Developer Tools',
     icon: Database,
-    items: ['PostgreSQL', 'Git', 'GitHub', 'Jira', 'Unity'],
+    items: ['PostgreSQL', 'Git', 'GitHub Actions', 'Jira', 'Unity 3D', 'Linux'],
   },
   {
-    label: 'Core Competencies',
+    label: 'Systems & Methodologies',
     icon: Cpu,
     items: [
-      'Full-Stack Development',
       'Agentic AI Workflows',
-      'Data Structures & Algorithms (DSA)',
-      'Object-Oriented Programming (OOP)',
-      'Agile / Scrum',
+      'Data Structures & Algorithms',
+      'Object-Oriented Design',
+      'SDLC & Agile Management',
+      'API Design',
     ],
   },
 ];
 
 const SkillsSection = () => {
   return (
-    <section id="skills" className="px-6 py-24 border-t border-border relative">
+    <section id="skills" className="px-6 py-24 border-t border-border/80 relative">
       <div className="max-w-6xl mx-auto">
-        <p className="eyebrow">04 — Skills</p>
-        <div className="rule" />
-        <h2 className="text-3xl sm:text-4xl font-bold mb-14">Technical toolkit</h2>
+        <div className="flex items-center gap-2 mb-2">
+          <span className="h-px w-6 bg-gold/60 inline-block" />
+          <p className="eyebrow !tracking-[0.2em] !mb-0">Technical Toolkit</p>
+        </div>
+        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-10">
+          Skills &amp; Technologies
+        </h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6">
           {groups.map((g) => {
             const Icon = g.icon;
             return (
-              <div key={g.label} className="card p-6 sm:p-7 border border-border">
-                <div className="flex items-center gap-2 mb-4 pb-3 border-b border-border/70">
-                  <Icon className="w-4 h-4 text-gold" />
-                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gold">
+              <div
+                key={g.label}
+                className="p-5 sm:p-6 rounded-lg bg-surface/70 border border-border hover:border-gold/30 transition-colors"
+              >
+                <div className="flex items-center gap-2.5 mb-4">
+                  <div className="p-1.5 rounded bg-gold/10 text-gold">
+                    <Icon className="w-4 h-4" />
+                  </div>
+                  <h3 className="text-sm font-semibold tracking-wide text-foreground uppercase">
                     {g.label}
                   </h3>
                 </div>
-                <div className="flex flex-wrap gap-2.5">
+
+                <div className="flex flex-wrap gap-2">
                   {g.items.map((item) => (
                     <span
                       key={item}
-                      className="tag font-medium py-1.5 px-3 hover:border-gold/50 transition-colors"
+                      className="text-xs px-2.5 py-1 rounded bg-background/80 border border-border/70 text-foreground/80 font-medium hover:border-gold/40 hover:text-gold transition-colors"
                     >
                       {item}
                     </span>

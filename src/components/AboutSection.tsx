@@ -9,11 +9,15 @@ const badges = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="px-6 py-24 border-t border-border relative">
+    <section id="about" className="px-6 py-24 border-t border-border/80 relative">
       <div className="max-w-6xl mx-auto">
-        <p className="eyebrow">01 — About</p>
-        <div className="rule" />
-        <h2 className="text-3xl sm:text-4xl font-bold mb-12">Who I am</h2>
+        <div className="flex items-center gap-2 mb-2">
+          <span className="h-px w-6 bg-gold/60 inline-block" />
+          <p className="eyebrow !tracking-[0.2em] !mb-0">Background &amp; Focus</p>
+        </div>
+        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-10">
+          Engineering &amp; Execution
+        </h2>
 
         <div className="grid md:grid-cols-[1.3fr_1fr] gap-12 items-start">
           <div>

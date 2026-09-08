@@ -7,33 +7,20 @@ const HeroSection = () => {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-gold/5 blur-[120px] pointer-events-none rounded-full" />
 
       <div className="max-w-6xl mx-auto w-full relative z-10">
-        {/* Status Pill & Location */}
-        <div className="flex flex-wrap items-center gap-3 mb-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-medium">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span>Available for Full-Stack &amp; AI Roles</span>
-          </div>
-          <span className="text-xs text-muted">·</span>
-          <p className="eyebrow !tracking-[0.15em] !text-muted">Lahore, Pakistan</p>
+        {/* Location Eyebrow */}
+        <div className="flex items-center gap-2 mb-6">
+          <p className="eyebrow !tracking-[0.2em] !text-muted">Lahore, Pakistan</p>
         </div>
 
-        <div className="rule" />
-
         {/* Main Name */}
-        <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold tracking-tight leading-[0.95] mb-5 text-foreground">
+        <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold tracking-tight leading-[0.95] mb-4 text-foreground">
           Daniyal Saqib
         </h1>
 
-        {/* Professional Title & Sub-roles */}
-        <div className="text-xl sm:text-2xl md:text-3xl font-medium text-foreground/90 mb-6 flex flex-wrap items-center gap-x-3 gap-y-1">
-          <span className="text-gold font-semibold">Full Stack &amp; AI Engineer</span>
-          <span className="text-muted hidden sm:inline">/</span>
-          <span className="text-foreground/75 text-lg sm:text-2xl">Ex-IT Intern, Allied Bank</span>
-          <span className="text-muted hidden sm:inline">/</span>
-          <span className="text-foreground/75 text-lg sm:text-2xl">Ex-COO, Axiolink Systems</span>
-          <span className="text-muted hidden sm:inline">/</span>
-          <span className="text-foreground/60 text-base sm:text-xl">CS @ UMT</span>
-        </div>
+        {/* Professional Title */}
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gold tracking-tight mb-6">
+          Full Stack &amp; AI Engineer
+        </h2>
 
         {/* Narrative Bio */}
         <p className="max-w-2xl text-foreground/70 mb-8 text-base sm:text-lg leading-relaxed font-normal">

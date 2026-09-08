@@ -13,12 +13,16 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="px-6 py-24 border-t border-border relative">
+    <section id="contact" className="px-6 py-24 border-t border-border/80 relative">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
         <div>
-          <p className="eyebrow">06 — Contact</p>
-          <div className="rule" />
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">Let's talk</h2>
+          <div className="flex items-center gap-2 mb-2">
+            <span className="h-px w-6 bg-gold/60 inline-block" />
+            <p className="eyebrow !tracking-[0.2em] !mb-0">Get In Touch</p>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-6">
+            Let's connect
+          </h2>
           <p className="text-foreground/75 max-w-md leading-relaxed mb-8">
             I’m actively open to <span className="text-foreground font-semibold">Full-Stack and AI Engineering roles</span>, high-impact projects, and technical collaborations. The fastest way to reach me is WhatsApp or direct email.
           </p>

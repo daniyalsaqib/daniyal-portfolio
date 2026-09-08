@@ -1,10 +1,12 @@
-import { Github, ArrowUpRight, Sparkles, Terminal, Map, MailCheck, Gamepad2, ShieldAlert, FileText } from 'lucide-react';
+import { useState } from 'react';
+import { Github, ArrowUpRight, Sparkles, Terminal, Map, MailCheck, Gamepad2, ShieldAlert, FileText, ChevronDown } from 'lucide-react';
 
 interface Project {
   title: string;
   category: string;
   status: string;
   isLiveOrActive?: boolean;
+  isFlagship?: boolean;
   description: string;
   stack: string[];
   repoUrl: string;
@@ -16,10 +18,11 @@ const projects: Project[] = [
   {
     title: 'ABL Outreach & Fraud Operations Suite',
     category: 'Agentic AI · Enterprise Banking',
-    status: 'Architected & Delivered',
+    status: 'Flagship Architecture',
     isLiveOrActive: false,
+    isFlagship: true,
     description:
-      'Authored the complete Software Requirements & Design Specification (SRDS) and built a layered multi-agent banking system: a Transaction Fraud Flagging Agent with plain-language explainability, a Cold Email Outreach Agent, and an Automated Charity Consent Workflow Agent enforcing a deterministic 5-state machine with bounded retries and an immutable audit trail.',
+      'Authored the complete Software Requirements & Design Specification (SRDS) and built a layered multi-agent banking system: an autonomous Transaction Fraud Flagging Agent with explainability, Cold Email Outreach Agent, and an Automated Charity Consent Workflow Agent enforcing a deterministic 5-state machine with bounded retries and an immutable audit trail.',
     stack: ['Python', 'FastAPI', 'Agentic Workflows', 'State Machine', 'Audit Logging', 'Synthetic Data'],
     repoUrl: 'https://github.com/daniyalsaqib/Outreach_Fraud_Charity_Suite_ABL',
     specUrl: '/ABL_Outreach_and_Fraud_Operations_Suite_Spec.pdf',
@@ -50,7 +53,7 @@ const projects: Project[] = [
   {
     title: 'Inbox Copilot',
     category: 'AI Hackathon · SOFTEC’26',
-    status: 'Built in 6h Sprint',
+    status: '6h Sprint',
     isLiveOrActive: false,
     description:
       'Engineered with Team Panic Pointers at FAST-NU Lahore under a 6-hour sprint. Classifies incoming opportunity emails, extracts key structured fields with LLM pipelines, and computes personalized priority rankings for executives.',
@@ -83,16 +86,25 @@ const projects: Project[] = [
 ];
 
 const ProjectsSection = () => {
+  const [showAll, setShowAll] = useState(false);
+
+  // Top 3 featured initially, reveal remaining on click
+  const visibleProjects = showAll ? projects : projects.slice(0, 3);
+
   return (
-    <section id="projects" className="px-6 py-24 border-t border-border relative">
+    <section id="projects" className="px-6 py-24 border-t border-border/80 relative">
       <div className="max-w-6xl mx-auto">
-        <p className="eyebrow">03 — Projects</p>
-        <div className="rule" />
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-14">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-3">Selected work</h2>
-            <p className="text-foreground/70 text-sm sm:text-base max-w-xl">
-              From enterprise agentic banking suites with design specs to full-stack geospatial platforms and game engines.
+            <div className="flex items-center gap-2 mb-2">
+              <span className="h-px w-6 bg-gold/60 inline-block" />
+              <p className="eyebrow !tracking-[0.2em] !mb-0">Selected Projects</p>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-3">
+              Crafted Systems &amp; Software
+            </h2>
+            <p className="text-foreground/75 text-sm sm:text-base max-w-xl">
+              Enterprise agentic banking systems with formal architecture specifications, full-stack geospatial platforms, and systems software.
             </p>
           </div>
           <a
@@ -102,27 +114,36 @@ const ProjectsSection = () => {
             className="btn-secondary text-xs py-2 px-3.5 w-fit"
           >
             <Github className="w-3.5 h-3.5" />
-            <span>GitHub Profile</span>
+            <span>All Repositories</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
         </div>
 
+        {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-6">
-          {projects.map((p) => {
+          {visibleProjects.map((p) => {
             const IconComponent = p.icon;
+            const isFlagship = p.isFlagship;
+
             return (
               <div
                 key={p.title}
-                className="card p-6 sm:p-7 flex flex-col justify-between group relative hover:border-gold/50 transition-all duration-300"
+                className={`card p-6 sm:p-7 flex flex-col justify-between group relative transition-all duration-300 ${
+                  isFlagship
+                    ? 'md:col-span-2 border-gold/40 bg-gradient-to-br from-surface via-surface to-gold/5 shadow-[0_4px_24px_rgba(201,168,76,0.08)]'
+                    : 'hover:border-gold/40'
+                }`}
               >
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-3">
-                    <span className="text-[11px] font-medium tracking-wider uppercase text-gold">
+                    <span className="text-[11px] font-semibold tracking-wider uppercase text-gold">
                       {p.category}
                     </span>
                     <span
-                      className={`text-[10px] uppercase tracking-wide font-semibold px-2 py-0.5 rounded-full border ${
-                        p.isLiveOrActive
+                      className={`text-[10px] uppercase tracking-wide font-semibold px-2.5 py-0.5 rounded-full border ${
+                        isFlagship
+                          ? 'border-gold/50 bg-gold/15 text-gold'
+                          : p.isLiveOrActive
                           ? 'border-emerald-500/40 bg-emerald-500/10 text-emerald-400'
                           : 'border-border bg-surface text-muted'
                       }`}
@@ -131,16 +152,16 @@ const ProjectsSection = () => {
                     </span>
                   </div>
 
-                  <div className="flex items-center gap-2.5 mb-2.5">
-                    <div className="p-1.5 rounded-md bg-gold/10 text-gold group-hover:scale-110 transition-transform">
+                  <div className="flex items-center gap-2.5 mb-3">
+                    <div className="p-2 rounded-md bg-gold/10 text-gold group-hover:scale-105 transition-transform">
                       <IconComponent className="w-4 h-4" />
                     </div>
-                    <h3 className="text-xl font-bold text-foreground group-hover:text-gold transition-colors">
+                    <h3 className="text-xl sm:text-2xl font-bold text-foreground group-hover:text-gold transition-colors">
                       {p.title}
                     </h3>
                   </div>
 
-                  <p className="text-foreground/75 text-sm leading-relaxed mb-6">
+                  <p className="text-foreground/75 text-sm sm:text-base leading-relaxed mb-6">
                     {p.description}
                   </p>
                 </div>
@@ -150,14 +171,14 @@ const ProjectsSection = () => {
                     {p.stack.map((s) => (
                       <span
                         key={s}
-                        className="text-[11px] px-2.5 py-1 rounded bg-surface border border-border/80 text-foreground/70"
+                        className="text-[11px] px-2.5 py-1 rounded bg-surface border border-border/80 text-foreground/75 font-medium"
                       >
                         {s}
                       </span>
                     ))}
                   </div>
 
-                  <div className="pt-4 border-t border-border/70 flex flex-wrap items-center justify-between gap-3">
+                  <div className="pt-4 border-t border-border/60 flex flex-wrap items-center justify-between gap-3">
                     <a
                       href={p.repoUrl}
                       target="_blank"
@@ -174,11 +195,11 @@ const ProjectsSection = () => {
                         href={p.specUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded border border-gold/30 bg-gold/5 text-gold hover:bg-gold/15 transition-all"
-                        title="Read the Software Requirements & Design Specification"
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-gold/40 bg-gold/10 text-gold hover:bg-gold/20 hover:border-gold transition-all shadow-[0_0_12px_rgba(201,168,76,0.15)]"
+                        title="Read the 8-page Software Requirements & Design Specification"
                       >
-                        <FileText className="w-3 h-3" />
-                        <span>Design Spec (PDF)</span>
+                        <FileText className="w-3.5 h-3.5" />
+                        <span>Read Architecture Spec (PDF)</span>
                         <ArrowUpRight className="w-3 h-3" />
                       </a>
                     )}
@@ -187,6 +208,21 @@ const ProjectsSection = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* View All / View Less Toggle Button */}
+        <div className="mt-10 flex justify-center">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="btn-secondary group px-6 py-2.5 text-xs font-semibold"
+          >
+            <span>{showAll ? 'Show Featured Projects Only' : `View All Projects (${projects.length})`}</span>
+            <ChevronDown
+              className={`w-4 h-4 text-gold transition-transform duration-300 ${
+                showAll ? 'rotate-180' : 'group-hover:translate-y-0.5'
+              }`}
+            />
+          </button>
         </div>
       </div>
     </section>
