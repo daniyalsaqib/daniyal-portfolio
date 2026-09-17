@@ -21,15 +21,12 @@ const jobs: Job[] = [
     location: 'Lahore, Pakistan',
     period: 'Aug 2026 – Sep 2026',
     current: false,
-    tagline: 'Engineered multi-agent banking AI suites, authored enterprise SRDS specification, and delivered high-reliability C++ banking operations engine.',
-    stack: ['Agentic AI', 'Python', 'FastAPI', 'State Machines', 'C++', 'Banking IT'],
+    tagline: 'Built banking intelligence workflows and delivered a high-reliability C++ banking operations engine during the Allied Bank Internship Program.',
+    stack: ['Agentic AI', 'Python', 'FastAPI', 'C++', 'Banking IT'],
     bullets: [
-      'Authored the complete Software Requirements & Design Specification (SRDS) and engineered the ABL Outreach & Fraud Operations Suite — an agentic system featuring an autonomous Transaction Fraud Flagging Agent, Cold Outreach Agent, and a deterministic Charity Consent State Machine.',
       'Designed the ABL Banking Intelligence pipeline for automated statement analysis, subscription & fee anomaly detection, and regulatory policy Q&A with source citations.',
       'Completed a high-reliability console-based banking operations engine (C++) as an onboarding technical milestone within ABL’s 4th IT Group.',
     ],
-    docUrl: '/ABL_Outreach_and_Fraud_Operations_Suite_Spec.pdf',
-    docTitle: 'View SRDS Design Spec (PDF)',
   },
   {
     title: 'Chief Operating Officer (COO)',

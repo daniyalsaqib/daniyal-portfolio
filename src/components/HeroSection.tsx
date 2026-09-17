@@ -1,4 +1,5 @@
 import { FileDown, ArrowUpRight, Github, Linkedin, Mail } from 'lucide-react';
+import { RESUME_URL } from '../config';
 
 const HeroSection = () => {
   return (
@@ -34,15 +35,14 @@ const HeroSection = () => {
             <ArrowUpRight className="w-4 h-4" />
           </a>
           <a
-            href="/Daniyal_Saqib_Resume.pdf"
-            download="Daniyal_Saqib_Resume.pdf"
+            href={RESUME_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-secondary group"
-            title="Download Daniyal Saqib's Resume"
+            title="Daniyal Saqib's Resume"
           >
             <FileDown className="w-4 h-4 text-gold group-hover:scale-110 transition-transform duration-200" />
-            <span>Download Resume</span>
+            <span>View Resume</span>
           </a>
           <a href="#contact" className="btn-ghost px-3 py-2">
             Get In Touch

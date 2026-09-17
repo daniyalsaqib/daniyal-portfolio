@@ -1,4 +1,5 @@
 import { ArrowUp, FileDown, Github, Linkedin, Mail } from 'lucide-react';
+import { RESUME_URL } from '../config';
 
 const Footer = () => {
   return (
@@ -32,8 +33,7 @@ const Footer = () => {
             <span>LinkedIn</span>
           </a>
           <a
-            href="/Daniyal_Saqib_Resume.pdf"
-            download="Daniyal_Saqib_Resume.pdf"
+            href={RESUME_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gold transition-colors flex items-center gap-1"

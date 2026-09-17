@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Github, ArrowUpRight, Sparkles, Terminal, Map, MailCheck, Gamepad2, ShieldAlert, FileText, ChevronDown } from 'lucide-react';
+import { Github, ArrowUpRight, Sparkles, Terminal, Map, MailCheck, Gamepad2, FileText, ChevronDown } from 'lucide-react';
 
 interface Project {
   title: string;
@@ -16,23 +16,10 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: 'ABL Outreach & Fraud Operations Suite',
-    category: 'Agentic AI · Enterprise Banking',
-    status: 'Flagship Architecture',
-    isLiveOrActive: false,
-    isFlagship: true,
-    description:
-      'Authored the complete Software Requirements & Design Specification (SRDS) and built a layered multi-agent banking system: an autonomous Transaction Fraud Flagging Agent with explainability, Cold Email Outreach Agent, and an Automated Charity Consent Workflow Agent enforcing a deterministic 5-state machine with bounded retries and an immutable audit trail.',
-    stack: ['Python', 'FastAPI', 'Agentic Workflows', 'State Machine', 'Audit Logging', 'Synthetic Data'],
-    repoUrl: 'https://github.com/daniyalsaqib/Outreach_Fraud_Charity_Suite_ABL',
-    specUrl: '/ABL_Outreach_and_Fraud_Operations_Suite_Spec.pdf',
-    icon: ShieldAlert,
-  },
-  {
     title: 'ABL Statement & Policy Intelligence',
     category: 'Agentic AI & RAG · Banking IT',
-    status: 'Delivered',
-    isLiveOrActive: false,
+    status: 'In Development',
+    isLiveOrActive: true,
     description:
       'Multi-agent pipeline engineered for retail banking intelligence: automated account statement Q&A, recurring subscription and fee anomaly detection, and institutional policy retrieval grounded in official banking guidelines with verifiable source citations.',
     stack: ['Python', 'FastAPI', 'RAG', 'Groq API', 'Vector Search'],
@@ -104,7 +91,7 @@ const ProjectsSection = () => {
               Crafted Systems &amp; Software
             </h2>
             <p className="text-foreground/75 text-sm sm:text-base max-w-xl">
-              Enterprise agentic banking systems with formal architecture specifications, full-stack geospatial platforms, and systems software.
+              Agentic banking intelligence, full-stack geospatial platforms, and systems software.
             </p>
           </div>
           <a

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Menu, X, FileDown, ArrowUpRight } from 'lucide-react';
+import { RESUME_URL } from '../config';
 
 const links = [
   { label: 'Home', href: '#home' },
@@ -39,12 +40,11 @@ const Navigation = () => {
         {/* Desktop Action Buttons */}
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="/Daniyal_Saqib_Resume.pdf"
-            download="Daniyal_Saqib_Resume.pdf"
+            href={RESUME_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-2 rounded-md border border-gold/30 text-gold hover:bg-gold/10 hover:border-gold transition-all duration-200"
-            title="Download Daniyal's Resume"
+            title="Daniyal's Resume"
           >
             <FileDown className="w-3.5 h-3.5" />
             <span>Resume</span>
@@ -57,8 +57,7 @@ const Navigation = () => {
         {/* Mobile Menu Button */}
         <div className="flex items-center gap-2 md:hidden">
           <a
-            href="/Daniyal_Saqib_Resume.pdf"
-            download="Daniyal_Saqib_Resume.pdf"
+            href={RESUME_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1.5 rounded border border-gold/30 text-gold"
@@ -94,15 +93,14 @@ const Navigation = () => {
           </ul>
           <div className="pt-6 mt-4 border-t border-border flex flex-col gap-3">
             <a
-              href="/Daniyal_Saqib_Resume.pdf"
-              download="Daniyal_Saqib_Resume.pdf"
+              href={RESUME_URL}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
               className="btn-secondary w-full justify-center text-sm py-2.5"
             >
               <FileDown className="w-4 h-4 text-gold" />
-              Download Resume
+              View Resume
             </a>
             <a
               href="#contact"

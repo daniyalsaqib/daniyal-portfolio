@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Mail, MessageSquare, Phone, Copy, Check, Linkedin, Github, FileDown } from 'lucide-react';
+import { RESUME_URL } from '../config';
 
 const ContactSection = () => {
   const [copied, setCopied] = useState(false);
@@ -107,14 +108,13 @@ const ContactSection = () => {
             </div>
 
             <a
-              href="/Daniyal_Saqib_Resume.pdf"
-              download="Daniyal_Saqib_Resume.pdf"
+              href={RESUME_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full flex items-center justify-center gap-2 p-3 rounded-md border border-border/80 text-foreground/80 hover:border-gold/50 hover:text-gold transition-colors text-xs font-medium"
             >
               <FileDown className="w-4 h-4 text-gold" />
-              <span>Download Updated Resume (PDF)</span>
+              <span>View Resume (PDF)</span>
             </a>
           </div>
 

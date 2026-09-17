@@ -10,8 +10,7 @@ Personal portfolio of **Daniyal Saqib**, Full Stack & AI Engineer. Features hand
 
 - **Noir & Gold Design System**: Tailored luxury dark aesthetic with Space Grotesk + DM Sans typography, ambient gold gradients, and glassmorphic cards.
 - **Responsive Mobile Navigation**: Dedicated slide-out drawer menu with smooth navigation across all screen sizes.
-- **Direct Resume Download**: 1-click download of the updated [`Daniyal_Saqib_Resume.pdf`](https://daniyalsaqib.me/Daniyal_Saqib_Resume.pdf).
-- **Interactive Architecture Specs**: Direct access to the 8-page [`ABL_Outreach_and_Fraud_Operations_Suite_Spec.pdf`](https://daniyalsaqib.me/ABL_Outreach_and_Fraud_Operations_Suite_Spec.pdf) (Software Requirements & Design Specification).
+- **Resume Access**: View the latest resume through the [permanent Google Drive link](https://drive.google.com/file/d/1jHP8eSCfihJ4ZHC2vDAZvXSw4nGqp922/view).
 - **Quick Actions**: One-click "Copy Email" with real-time feedback indicator and direct WhatsApp links.
 
 ---
@@ -20,7 +19,6 @@ Personal portfolio of **Daniyal Saqib**, Full Stack & AI Engineer. Features hand
 
 | Project | Domain | Stack | Links |
 | :--- | :--- | :--- | :--- |
-| **ABL Outreach & Fraud Operations Suite** | Agentic AI & Banking IT | Python, FastAPI, State Machines, Audit Logging | [GitHub Repo](https://github.com/daniyalsaqib/Outreach_Fraud_Charity_Suite_ABL) • [Design Spec (PDF)](https://daniyalsaqib.me/ABL_Outreach_and_Fraud_Operations_Suite_Spec.pdf) |
 | **ABL Statement & Policy Intelligence** | Agentic AI & RAG | Python, FastAPI, RAG, Groq API, Vector Search | [GitHub Repo](https://github.com/daniyalsaqib/Statement_Intelligence_Suite_ABL) |
 | **Networking CRM System** | Full Stack & Geospatial | Next.js, PostgreSQL, Leaflet, TypeScript, Tailwind | [GitHub Repo](https://github.com/daniyalsaqib/networking-crm) *(In Development)* |
 | **Inbox Copilot** | AI Hackathon (SOFTEC'26) | Streamlit, Python, FastAPI, Groq API, NLP | [GitHub Repo](https://github.com/frdnu/SOFTEC-AI-HACKATHON-2026) |
