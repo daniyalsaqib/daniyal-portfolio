@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, FileDown, ArrowUpRight } from 'lucide-react';
+import { Menu, X, FileText, ArrowUpRight } from 'lucide-react';
 import { RESUME_URL } from '../config';
 
 const links = [
@@ -46,8 +46,8 @@ const Navigation = () => {
             className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-2 rounded-md border border-gold/30 text-gold hover:bg-gold/10 hover:border-gold transition-all duration-200"
             title="Daniyal's Resume"
           >
-            <FileDown className="w-3.5 h-3.5" />
-            <span>Resume</span>
+            <FileText className="w-3.5 h-3.5" />
+            <span>View Resume</span>
           </a>
           <a href="#contact" className="btn-primary text-xs py-2 px-3.5">
             Get In Touch
@@ -62,8 +62,8 @@ const Navigation = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1.5 rounded border border-gold/30 text-gold"
           >
-            <FileDown className="w-3 h-3" />
-            <span>CV</span>
+            <FileText className="w-3 h-3" />
+            <span>Resume</span>
           </a>
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -99,7 +99,7 @@ const Navigation = () => {
               onClick={() => setMobileOpen(false)}
               className="btn-secondary w-full justify-center text-sm py-2.5"
             >
-              <FileDown className="w-4 h-4 text-gold" />
+              <FileText className="w-4 h-4 text-gold" />
               View Resume
             </a>
             <a

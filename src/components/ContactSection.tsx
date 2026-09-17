@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, MessageSquare, Phone, Copy, Check, Linkedin, Github, FileDown } from 'lucide-react';
+import { Mail, MessageSquare, Phone, Copy, Check, Linkedin, Github, FileText } from 'lucide-react';
 import { RESUME_URL } from '../config';
 
 const ContactSection = () => {
@@ -113,8 +113,8 @@ const ContactSection = () => {
               rel="noopener noreferrer"
               className="w-full flex items-center justify-center gap-2 p-3 rounded-md border border-border/80 text-foreground/80 hover:border-gold/50 hover:text-gold transition-colors text-xs font-medium"
             >
-              <FileDown className="w-4 h-4 text-gold" />
-              <span>View Resume (PDF)</span>
+              <FileText className="w-4 h-4 text-gold" />
+              <span>View Resume</span>
             </a>
           </div>
 

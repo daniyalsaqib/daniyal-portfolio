@@ -1,4 +1,4 @@
-import { FileDown, ArrowUpRight, Github, Linkedin, Mail } from 'lucide-react';
+import { FileText, ArrowUpRight, Github, Linkedin, Mail } from 'lucide-react';
 import { RESUME_URL } from '../config';
 
 const HeroSection = () => {
@@ -41,7 +41,7 @@ const HeroSection = () => {
             className="btn-secondary group"
             title="Daniyal Saqib's Resume"
           >
-            <FileDown className="w-4 h-4 text-gold group-hover:scale-110 transition-transform duration-200" />
+            <FileText className="w-4 h-4 text-gold group-hover:scale-110 transition-transform duration-200" />
             <span>View Resume</span>
           </a>
           <a href="#contact" className="btn-ghost px-3 py-2">

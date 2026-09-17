@@ -1,4 +1,4 @@
-import { ArrowUp, FileDown, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowUp, FileText, Github, Linkedin, Mail } from 'lucide-react';
 import { RESUME_URL } from '../config';
 
 const Footer = () => {
@@ -38,7 +38,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="hover:text-gold transition-colors flex items-center gap-1"
           >
-            <FileDown className="w-3.5 h-3.5" />
+            <FileText className="w-3.5 h-3.5" />
             <span>Resume</span>
           </a>
           <a
