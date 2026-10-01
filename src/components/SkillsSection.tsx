@@ -2,29 +2,38 @@ import { Code2, Globe, Database, Cpu } from 'lucide-react';
 
 const groups = [
   {
-    label: 'Core Languages',
+    label: 'Languages',
     icon: Code2,
-    items: ['Python', 'JavaScript (ES6+)', 'TypeScript', 'C++', 'Java', 'C#', 'SQL'],
+    items: ['JavaScript (ES6+)', 'Python', 'C++', 'Java', 'C#', 'SQL', 'TypeScript'],
   },
   {
-    label: 'Web & AI Frameworks',
+    label: 'Web & AI',
     icon: Globe,
-    items: ['React', 'Next.js', 'FastAPI', 'Streamlit', 'Node.js', 'TailwindCSS'],
+    items: [
+      'React',
+      'FastAPI',
+      'Streamlit',
+      'Node.js',
+      'Agentic AI Workflows',
+      'RAG',
+      'REST APIs',
+      'HTML5/CSS3',
+    ],
   },
   {
-    label: 'Data & Developer Tools',
+    label: 'Databases & Tools',
     icon: Database,
-    items: ['PostgreSQL', 'Git', 'GitHub Actions', 'Jira', 'Unity 3D', 'Linux'],
+    items: ['PostgreSQL', 'Git', 'GitHub', 'Jira', 'Unity', 'Linux'],
   },
   {
-    label: 'Systems & Methodologies',
+    label: 'Core Competencies',
     icon: Cpu,
     items: [
-      'Agentic AI Workflows',
-      'Data Structures & Algorithms',
-      'Object-Oriented Design',
-      'SDLC & Agile Management',
-      'API Design',
+      'Full-Stack Development',
+      'Data Structures & Algorithms (DSA)',
+      'OOP',
+      'Agile/Scrum',
+      'System Architecture',
     ],
   },
 ];

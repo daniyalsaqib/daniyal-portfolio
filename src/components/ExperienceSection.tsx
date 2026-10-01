@@ -16,16 +16,29 @@ interface Job {
 
 const jobs: Job[] = [
   {
+    title: 'Chief Operating Officer (COO)',
+    company: 'Devsignia',
+    location: 'Lahore, Pakistan',
+    period: 'Sep 2026 – Present',
+    current: true,
+    tagline: 'Leading executive operations, client acquisition, team coordination, and strategic planning alongside the Founder & CEO.',
+    stack: ['Executive Leadership', 'Operations', 'Business Development', 'Team Recruitment', 'Strategic Planning'],
+    bullets: [
+      'Support the Founder/CEO across business development, client acquisition, operations, team coordination, recruitment, and strategic planning.',
+      'Coordinate project progress and staffing across active engagements while helping establish internal workflows aligned with company objectives.',
+    ],
+  },
+  {
     title: 'IT Intern',
     company: 'Allied Bank Limited (ABL)',
     location: 'Lahore, Pakistan',
     period: 'Aug 2026 – Sep 2026',
     current: false,
-    tagline: 'Built banking intelligence workflows and delivered a high-reliability C++ banking operations engine during the Allied Bank Internship Program.',
-    stack: ['Agentic AI', 'Python', 'FastAPI', 'C++', 'Banking IT'],
+    tagline: 'Built banking intelligence pipelines and delivered a high-reliability C++ banking operations engine during the Allied Bank Internship Program.',
+    stack: ['Agentic AI', 'Python', 'FastAPI', 'RAG', 'C++', 'Banking IT'],
     bullets: [
-      'Designed the ABL Banking Intelligence pipeline for automated statement analysis, subscription & fee anomaly detection, and regulatory policy Q&A with source citations.',
-      'Completed a high-reliability console-based banking operations engine (C++) as an onboarding technical milestone within ABL’s 4th IT Group.',
+      'Built a statement and policy intelligence pipeline for statement Q&A, subscription and fee anomaly detection, and source-cited policy retrieval.',
+      'Developed a C++ banking operations engine as part of the internship’s technical work.',
     ],
   },
   {
@@ -37,9 +50,20 @@ const jobs: Job[] = [
     tagline: 'Restructured engineering department of 20 down to an agile 10-person unit, driving sprint cadence, delivery accountability, and tech recruitment.',
     stack: ['Engineering Leadership', 'Agile / Jira', 'SDLC Management', 'Operations'],
     bullets: [
-      'Restructured a 20-person technical team into a focused 10-person unit, boosting delivery accountability, sprint predictability, and cross-team communication.',
-      'Partnered closely with the CTO to decompose complex product roadmaps, prioritize sprint backlogs, and delegate technical deliverables in Jira.',
-      'Served as the primary public face of Axiolink across campus, driving organic brand visibility and developer talent acquisition.',
+      'Restructured a 20-person technical team into a focused 10-person unit, improving delivery accountability, sprint predictability, and cross-team communication.',
+      'Partnered with the CTO to decompose product roadmaps, prioritize sprint backlogs, delegate technical deliverables in Jira, and support developer talent acquisition.',
+    ],
+  },
+  {
+    title: 'Business Partner',
+    company: 'Codzilla Technologies',
+    location: 'Lahore, Pakistan',
+    period: 'Aug 2026 – Present',
+    current: true,
+    tagline: 'Facilitating enterprise mobile app development engagements, stakeholder communication, and requirements scoping.',
+    stack: ['Business Partnership', 'Client Acquisition', 'Requirements Gathering', 'Project Coordination'],
+    bullets: [
+      'Facilitated the Al Noor Milk app development engagement through client introduction, initial communication, requirements gathering, and project coordination.',
     ],
   },
   {
@@ -48,11 +72,11 @@ const jobs: Job[] = [
     location: 'Lahore, Pakistan',
     period: 'Aug 2025 – Oct 2025',
     current: false,
-    tagline: 'Built real-time digital clock synchronization modules in JavaScript and contributed to responsive production interfaces.',
+    tagline: 'Built real-time digital clock synchronization modules in JavaScript and contributed to responsive interfaces.',
     stack: ['JavaScript', 'HTML5/CSS3', 'Git', 'Team Workflows'],
     bullets: [
-      'Engineered a real-time digital clock synchronization module in JavaScript while collaborating alongside senior software engineers.',
-      'Contributed to responsive production interfaces and adhered to rigorous Git/GitHub branching and review standards.',
+      'Engineered a real-time digital clock synchronization module in JavaScript while contributing to responsive interfaces.',
+      'Followed Git/GitHub branching and review workflows within the development team.',
     ],
   },
 ];

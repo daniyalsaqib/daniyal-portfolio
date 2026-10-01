@@ -19,13 +19,15 @@ const HeroSection = () => {
         </h1>
 
         {/* Professional Title */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gold tracking-tight mb-6">
-          Full Stack &amp; AI Engineer
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gold tracking-tight mb-6 flex flex-wrap items-center gap-x-3 gap-y-1">
+          <span>Full Stack &amp; AI Engineer</span>
+          <span className="text-foreground/40 font-light text-xl sm:text-2xl md:text-3xl">|</span>
+          <span className="text-foreground/90 text-xl sm:text-2xl md:text-3xl font-medium">COO @ Devsignia</span>
         </h2>
 
         {/* Narrative Bio */}
-        <p className="max-w-2xl text-foreground/70 mb-8 text-base sm:text-lg leading-relaxed font-normal">
-          Full-Stack and AI Engineer with hands-on experience building agentic workflows at Allied Bank and scalable web platforms across React, Next.js, FastAPI, and PostgreSQL. Former COO who restructured and led a 10-person engineering unit, pairing technical delivery with operational discipline.
+        <p className="max-w-2xl text-foreground/75 mb-8 text-base sm:text-lg leading-relaxed font-normal">
+          Full-stack and AI engineer with hands-on experience building agentic workflows, banking intelligence systems, and web applications using React, FastAPI, PostgreSQL, Python, and JavaScript. Currently COO at Devsignia with prior COO experience at Axiolink Systems, combining engineering execution, team operations, and business development.
         </p>
 
         {/* Primary Call-to-Actions */}

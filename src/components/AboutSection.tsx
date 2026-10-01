@@ -2,6 +2,7 @@ import { GraduationCap, BookOpen, Code2, Briefcase } from 'lucide-react';
 
 const badges = [
   'Full Stack & AI Engineer',
+  'COO @ Devsignia',
   'Ex-IT Intern, Allied Bank',
   'Ex-COO, Axiolink Systems',
   'BS CS @ UMT (2027)',
@@ -22,13 +23,13 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-[1.3fr_1fr] gap-12 items-start">
           <div>
             <p className="text-foreground/85 leading-relaxed text-base sm:text-lg mb-5">
-              I'm a <span className="text-foreground font-semibold">Full Stack and AI Engineer</span> and Computer Science student at UMT. Following my IT internship at Allied Bank where I engineered agentic AI systems and high-reliability C++ banking infrastructure, I build high-performance web systems using React/Next.js, FastAPI, PostgreSQL, and Python.
+              I'm a <span className="text-foreground font-semibold">Full Stack and AI Engineer</span> and Computer Science student at UMT. Following my IT internship at Allied Bank where I built banking intelligence pipelines and C++ banking infrastructure, I build robust, production-grade web systems and agentic workflows using React, FastAPI, PostgreSQL, and Python.
             </p>
             <p className="text-foreground/80 leading-relaxed text-sm sm:text-base mb-5">
-              Prior to my banking engineering work, I served as <span className="text-gold font-medium">Chief Operating Officer (COO) at Axiolink Systems</span>, where I restructured an engineering department of 20 down to an agile 10-person technical unit, improving delivery accountability, sprint cadence, and engineering velocity.
+              Currently serving as <span className="text-gold font-medium">Chief Operating Officer (COO) at Devsignia</span>, I support the Founder/CEO across business development, client acquisition, operations, team coordination, and strategic planning. Previously as COO at <span className="text-foreground font-medium">Axiolink Systems</span>, I restructured an engineering team of 20 into a high-accountability 10-person unit to maximize delivery speed and predictability.
             </p>
             <p className="text-foreground/80 leading-relaxed text-sm sm:text-base mb-8">
-              That blend of full-stack engineering, practical AI architecture, and startup execution drives how I build: clean, maintainable systems that serve actual user needs and business metrics without unnecessary overhead.
+              Combining technical depth in AI and full-stack development with hands-on executive operations allows me to build maintainable, user-focused software that drives tangible business outcomes.
             </p>
 
             <div className="flex flex-wrap gap-2.5">
@@ -52,6 +53,10 @@ const AboutSection = () => {
             </p>
 
             <div className="space-y-3 py-4 border-t border-border/70 text-sm">
+              <div className="flex justify-between items-center">
+                <span className="text-muted">CGPA</span>
+                <span className="font-semibold text-gold">3.00</span>
+              </div>
               <div className="flex justify-between items-center">
                 <span className="text-muted">Expected Graduation</span>
                 <span className="font-medium text-foreground">Jun 2027</span>

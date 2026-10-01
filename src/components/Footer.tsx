@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
           <p className="font-semibold text-foreground">Daniyal Saqib</p>
           <span className="hidden sm:inline text-border">•</span>
-          <p className="text-xs text-muted">Full Stack &amp; AI Engineer</p>
+          <p className="text-xs text-muted">Full Stack &amp; AI Engineer · COO @ Devsignia</p>
           <span className="hidden sm:inline text-border">•</span>
           <p className="text-xs text-muted">© {new Date().getFullYear()} All rights reserved</p>
         </div>

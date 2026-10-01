@@ -21,8 +21,8 @@ const projects: Project[] = [
     status: 'In Development',
     isLiveOrActive: true,
     description:
-      'Multi-agent pipeline engineered for retail banking intelligence: automated account statement Q&A, recurring subscription and fee anomaly detection, and institutional policy retrieval grounded in official banking guidelines with verifiable source citations.',
-    stack: ['Python', 'FastAPI', 'RAG', 'Groq API', 'Vector Search'],
+      'Multi-agent pipeline engineered for retail banking intelligence: automated account statement Q&A, recurring subscription and fee anomaly detection, and institutional policy retrieval grounded in official banking guidance with source citations.',
+    stack: ['Python', 'FastAPI', 'RAG', 'Vector Search', 'Groq API'],
     repoUrl: 'https://github.com/daniyalsaqib/Statement_Intelligence_Suite_ABL',
     icon: Sparkles,
   },
@@ -32,8 +32,8 @@ const projects: Project[] = [
     status: 'In Development',
     isLiveOrActive: true,
     description:
-      'Map-based contact intelligence and relationship management system for organizing, indexing, and surfacing a 1,300+ professional network based on real-time geographic proximity, company clusters, and industry tags.',
-    stack: ['Next.js', 'PostgreSQL', 'Leaflet', 'TypeScript', 'TailwindCSS'],
+      'Contact intelligence and relationship management system for organizing, indexing, and surfacing a 2,000+ professional network based on real-time geographic proximity, company clusters, and industry tags to make relevant connections easier to discover.',
+    stack: ['React', 'JavaScript', 'PostgreSQL', 'Leaflet', 'TypeScript'],
     repoUrl: 'https://github.com/daniyalsaqib/networking-crm',
     icon: Map,
   },
@@ -43,21 +43,10 @@ const projects: Project[] = [
     status: '6h Sprint',
     isLiveOrActive: false,
     description:
-      'Engineered with Team Panic Pointers at FAST-NU Lahore under a 6-hour sprint. Classifies incoming opportunity emails, extracts key structured fields with LLM pipelines, and computes personalized priority rankings for executives.',
-    stack: ['Streamlit', 'Python', 'FastAPI', 'Groq API', 'NLP'],
+      'Built with Team Panic Pointers at FAST-NU Lahore in a 6-hour sprint. Classifies opportunity emails, extracts structured fields with LLM pipelines, and computes personalized priority rankings.',
+    stack: ['Python', 'Streamlit', 'FastAPI', 'Groq API'],
     repoUrl: 'https://github.com/frdnu/SOFTEC-AI-HACKATHON-2026',
     icon: MailCheck,
-  },
-  {
-    title: 'ABL Core Banking Console',
-    category: 'Systems · C++',
-    status: 'Delivered Milestone',
-    isLiveOrActive: false,
-    description:
-      'Console-based banking operations menu engineered as an onboarding technical assignment within Allied Bank’s 4th IT Group, simulating transaction routing, balance validations, and ledger updates with low-level data structures.',
-    stack: ['C++', 'OOP', 'Data Structures', 'Memory Management'],
-    repoUrl: 'https://github.com/daniyalsaqib/ablinternship-fall-2026/blob/main/Sir%20Affan/banking.cpp',
-    icon: Terminal,
   },
   {
     title: 'PatientZero Prototype',
@@ -65,10 +54,21 @@ const projects: Project[] = [
     status: 'Playable Prototype',
     isLiveOrActive: false,
     description:
-      'Atmospheric horror game prototype featuring custom C# creature behavior logic, spatial sound triggers, and collision detection systems built with two teammates for an elective in Game Development.',
-    stack: ['C#', 'Unity 3D', 'AI State Machines', 'Collision Logic'],
+      'Playable horror game prototype with custom C# behavior logic, spatial triggers, and collision systems built with two teammates for a Game Development elective.',
+    stack: ['C#', 'Unity3D', 'AI State Machines', 'Collision Logic'],
     repoUrl: 'https://github.com/daniyalsaqib/PatientZero_Prototype',
     icon: Gamepad2,
+  },
+  {
+    title: 'ABL Core Banking Console',
+    category: 'Systems · C++',
+    status: 'Delivered Milestone',
+    isLiveOrActive: false,
+    description:
+      'High-reliability console-based banking operations engine developed in C++ as an onboarding technical milestone within Allied Bank’s 4th IT Group, simulating transaction routing, balance validations, and ledger updates.',
+    stack: ['C++', 'OOP', 'Data Structures', 'Memory Management'],
+    repoUrl: 'https://github.com/daniyalsaqib/ablinternship-fall-2026/blob/main/Sir%20Affan/banking.cpp',
+    icon: Terminal,
   },
 ];
 
