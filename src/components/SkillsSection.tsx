@@ -16,6 +16,7 @@ const groups = [
       'Node.js',
       'Agentic AI Workflows',
       'RAG',
+      'Vector Search',
       'REST APIs',
       'HTML5/CSS3',
     ],
