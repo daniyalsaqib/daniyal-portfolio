@@ -4,7 +4,7 @@ import { Github, ArrowUpRight, Sparkles, Terminal, Map, MailCheck, Gamepad2, Fil
 interface Project {
   title: string;
   category: string;
-  status: string;
+  status?: string;
   isLiveOrActive?: boolean;
   isFlagship?: boolean;
   description: string;
@@ -18,7 +18,6 @@ const projects: Project[] = [
   {
     title: 'ABL Statement & Policy Intelligence',
     category: 'Agentic AI & RAG · Banking IT',
-    status: 'In Development',
     isLiveOrActive: true,
     description:
       'Multi-agent pipeline engineered for retail banking intelligence: automated account statement Q&A, recurring subscription and fee anomaly detection, and institutional policy retrieval grounded in official banking guidance with source citations.',
@@ -126,17 +125,19 @@ const ProjectsSection = () => {
                     <span className="text-[11px] font-semibold tracking-wider uppercase text-gold">
                       {p.category}
                     </span>
-                    <span
-                      className={`text-[10px] uppercase tracking-wide font-semibold px-2.5 py-0.5 rounded-full border ${
-                        isFlagship
-                          ? 'border-gold/50 bg-gold/15 text-gold'
-                          : p.isLiveOrActive
-                          ? 'border-emerald-500/40 bg-emerald-500/10 text-emerald-400'
-                          : 'border-border bg-surface text-muted'
-                      }`}
-                    >
-                      {p.status}
-                    </span>
+                    {p.status && (
+                      <span
+                        className={`text-[10px] uppercase tracking-wide font-semibold px-2.5 py-0.5 rounded-full border ${
+                          isFlagship
+                            ? 'border-gold/50 bg-gold/15 text-gold'
+                            : p.isLiveOrActive
+                            ? 'border-emerald-500/40 bg-emerald-500/10 text-emerald-400'
+                            : 'border-border bg-surface text-muted'
+                        }`}
+                      >
+                        {p.status}
+                      </span>
+                    )}
                   </div>
 
                   <div className="flex items-center gap-2.5 mb-3">
