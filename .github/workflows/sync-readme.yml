@@ -1,0 +1,49 @@
+name: Sync README to GitHub Profile
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'README.md'
+      - '.github/workflows/sync-readme.yml'
+  workflow_dispatch:
+
+jobs:
+  sync-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for Required Secret
+        run: |
+          if [ -z "${{ secrets.PROFILE_SYNC_TOKEN }}" ]; then
+            echo "::error::The secret PROFILE_SYNC_TOKEN is not configured in this repository."
+            echo "Please create a GitHub Personal Access Token (classic with 'repo' scope or fine-grained with write access to daniyalsaqib/daniyalsaqib) and add it as a secret named PROFILE_SYNC_TOKEN under Settings -> Secrets and variables -> Actions."
+            exit 1
+          fi
+
+      - name: Checkout Source Portfolio Repo
+        uses: actions/checkout@v4
+        with:
+          path: source
+
+      - name: Checkout Target Profile Repo (daniyalsaqib/daniyalsaqib)
+        uses: actions/checkout@v4
+        with:
+          repository: 'daniyalsaqib/daniyalsaqib'
+          token: ${{ secrets.PROFILE_SYNC_TOKEN }}
+          path: target
+
+      - name: Copy README & Push to Profile Repository
+        run: |
+          cp source/README.md target/README.md
+          cd target
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet README.md; then
+            echo "No differences detected in README.md. Skipping push."
+          else
+            git add README.md
+            git commit -m "sync: update profile README from daniyal-portfolio (${{ github.sha }})"
+            git push origin HEAD
+            echo "Successfully synced README.md to daniyalsaqib/daniyalsaqib!"
+          fi
