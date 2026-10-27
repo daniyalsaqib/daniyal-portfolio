@@ -104,6 +104,7 @@ This repository contains the source code for [daniyalsaqib.me](https://daniyalsa
 - **Styling**: Tailwind CSS with custom HSL noir & gold design tokens
 - **Typography**: Google Fonts (`Space Grotesk` display + `DM Sans` body)
 - **Icons**: Lucide React
+- **SEO & Discoverability**: Static HTML prerendering, Schema.org JSON-LD (`Person`, `ProfilePage`, `WebSite`), Open Graph & Twitter preview metadata, XML sitemap, and robots.txt
 - **Deployment**: Vercel (Edge Network CI/CD)
 
 ### Local Development Setup

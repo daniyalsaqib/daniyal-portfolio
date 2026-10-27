@@ -96,7 +96,7 @@ const ProjectsSection = () => {
           <a
             href="https://github.com/daniyalsaqib"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="btn-secondary text-xs py-2 px-3.5 w-fit"
           >
             <Github className="w-3.5 h-3.5" />
@@ -107,9 +107,10 @@ const ProjectsSection = () => {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-6">
-          {visibleProjects.map((p) => {
+          {projects.map((p, index) => {
             const IconComponent = p.icon;
             const isFlagship = p.isFlagship;
+            const isHidden = index >= 3 && !showAll;
 
             return (
               <div
@@ -118,7 +119,7 @@ const ProjectsSection = () => {
                   isFlagship
                     ? 'md:col-span-2 border-gold/40 bg-gradient-to-br from-surface via-surface to-gold/5 shadow-[0_4px_24px_rgba(201,168,76,0.08)]'
                     : 'hover:border-gold/40'
-                }`}
+                } ${isHidden ? 'hidden' : 'flex'}`}
               >
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-3">
@@ -170,8 +171,9 @@ const ProjectsSection = () => {
                     <a
                       href={p.repoUrl}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 text-xs font-semibold text-gold hover:text-gold-light transition-colors"
+                      aria-label={`View ${p.title} repository on GitHub`}
                     >
                       <Github className="w-3.5 h-3.5" />
                       <span>View Code / Repo</span>
@@ -185,6 +187,7 @@ const ProjectsSection = () => {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-gold/40 bg-gold/10 text-gold hover:bg-gold/20 hover:border-gold transition-all shadow-[0_0_12px_rgba(201,168,76,0.15)]"
                         title="Read the 8-page Software Requirements & Design Specification"
+                        aria-label={`Read Architecture Specification for ${p.title}`}
                       >
                         <FileText className="w-3.5 h-3.5" />
                         <span>Read Architecture Spec (PDF)</span>
@@ -202,6 +205,7 @@ const ProjectsSection = () => {
         <div className="mt-10 flex justify-center">
           <button
             onClick={() => setShowAll(!showAll)}
+            aria-expanded={showAll}
             className="btn-secondary group px-6 py-2.5 text-xs font-semibold"
           >
             <span>{showAll ? 'Show Featured Projects Only' : `View All Projects (${projects.length})`}</span>

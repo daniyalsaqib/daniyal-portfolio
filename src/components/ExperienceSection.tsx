@@ -144,10 +144,14 @@ const ExperienceSection = () => {
                   onClick={() => toggleIndex(index)}
                   className="w-full text-left p-6 sm:p-7 flex flex-col gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/60"
                   aria-expanded={isExpanded}
+                  aria-controls={`job-details-${index}`}
                 >
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 w-full">
                     <div className="flex flex-wrap items-center gap-2.5">
-                      <h3 className="text-lg sm:text-xl font-bold text-foreground group-hover:text-gold transition-colors">
+                      <h3
+                        id={`job-heading-${index}`}
+                        className="text-lg sm:text-xl font-bold text-foreground group-hover:text-gold transition-colors"
+                      >
                         {job.title}
                       </h3>
                       <span className="text-muted text-sm hidden sm:inline">·</span>
@@ -184,48 +188,53 @@ const ExperienceSection = () => {
                   </p>
                 </button>
 
-                {/* Expanded Details Body */}
-                {isExpanded && (
-                  <div className="px-6 pb-6 sm:px-7 sm:pb-7 pt-2 border-t border-border/60 animate-fadeIn">
-                    <h4 className="text-xs uppercase tracking-wider font-semibold text-muted mb-3">
-                      Key Deliverables &amp; Impact
-                    </h4>
-                    <ul className="space-y-2.5 text-foreground/85 text-sm mb-6 leading-relaxed">
-                      {job.bullets.map((bullet) => (
-                        <li key={bullet} className="flex items-start gap-2.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0" />
-                          <span>{bullet}</span>
-                        </li>
-                      ))}
-                    </ul>
+                {/* Details Body - Retained in DOM for search crawlers with accessible toggle */}
+                <div
+                  id={`job-details-${index}`}
+                  role="region"
+                  aria-labelledby={`job-heading-${index}`}
+                  className={`px-6 pb-6 sm:px-7 sm:pb-7 pt-2 border-t border-border/60 ${
+                    isExpanded ? 'block animate-fadeIn' : 'hidden'
+                  }`}
+                >
+                  <h4 className="text-xs uppercase tracking-wider font-semibold text-muted mb-3">
+                    Key Deliverables &amp; Impact
+                  </h4>
+                  <ul className="space-y-2.5 text-foreground/85 text-sm mb-6 leading-relaxed">
+                    {job.bullets.map((bullet) => (
+                      <li key={bullet} className="flex items-start gap-2.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0" />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
 
-                    {/* Footer bar with stack and optional document link */}
-                    <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-border/50">
-                      <div className="flex flex-wrap gap-1.5">
-                        {job.stack.map((tech) => (
-                          <span
-                            key={tech}
-                            className="text-xs px-2.5 py-1 rounded bg-background/60 border border-border/70 text-foreground/80 font-medium"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-
-                      {job.docUrl && (
-                        <a
-                          href={job.docUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-xs font-semibold text-gold hover:text-gold-light transition-colors py-1 px-2.5 rounded border border-gold/30 bg-gold/5"
+                  {/* Footer bar with stack and optional document link */}
+                  <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-border/50">
+                    <div className="flex flex-wrap gap-1.5">
+                      {job.stack.map((tech) => (
+                        <span
+                          key={tech}
+                          className="text-xs px-2.5 py-1 rounded bg-background/60 border border-border/70 text-foreground/80 font-medium"
                         >
-                          <FileText className="w-3.5 h-3.5" />
-                          <span>{job.docTitle}</span>
-                        </a>
-                      )}
+                          {tech}
+                        </span>
+                      ))}
                     </div>
+
+                    {job.docUrl && (
+                      <a
+                        href={job.docUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-gold hover:text-gold-light transition-colors py-1 px-2.5 rounded border border-gold/30 bg-gold/5"
+                      >
+                        <FileText className="w-3.5 h-3.5" />
+                        <span>{job.docTitle}</span>
+                      </a>
+                    )}
                   </div>
-                )}
+                </div>
               </div>
             );
           })}

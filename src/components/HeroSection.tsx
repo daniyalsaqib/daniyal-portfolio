@@ -57,7 +57,7 @@ const HeroSection = () => {
           <a
             href="https://github.com/daniyalsaqib"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="hover:text-gold transition-colors flex items-center gap-1.5"
             aria-label="GitHub Profile"
           >
@@ -67,7 +67,7 @@ const HeroSection = () => {
           <a
             href="https://linkedin.com/in/daniyal-saqib-012142335"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="hover:text-gold transition-colors flex items-center gap-1.5"
             aria-label="LinkedIn Profile"
           >

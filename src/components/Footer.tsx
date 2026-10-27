@@ -17,8 +17,9 @@ const Footer = () => {
           <a
             href="https://github.com/daniyalsaqib"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="hover:text-gold transition-colors flex items-center gap-1"
+            aria-label="GitHub Profile"
           >
             <Github className="w-3.5 h-3.5" />
             <span>GitHub</span>
@@ -26,8 +27,9 @@ const Footer = () => {
           <a
             href="https://linkedin.com/in/daniyal-saqib-012142335"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="hover:text-gold transition-colors flex items-center gap-1"
+            aria-label="LinkedIn Profile"
           >
             <Linkedin className="w-3.5 h-3.5" />
             <span>LinkedIn</span>
@@ -45,6 +47,7 @@ const Footer = () => {
             href="#home"
             className="hover:text-gold transition-colors flex items-center gap-1 p-1"
             title="Back to top"
+            aria-label="Back to top"
           >
             <ArrowUp className="w-3.5 h-3.5" />
           </a>

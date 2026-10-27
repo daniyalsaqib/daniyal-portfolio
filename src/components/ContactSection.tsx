@@ -54,7 +54,7 @@ const ContactSection = () => {
                 <a
                   href="https://wa.me/923308068062"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="text-foreground hover:text-gold transition-colors font-medium"
                 >
                   {phone}
@@ -72,7 +72,7 @@ const ContactSection = () => {
             <a
               href="https://wa.me/923308068062"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="btn-primary w-full justify-center py-3 text-sm"
             >
               <MessageSquare className="w-4 h-4" />
@@ -124,7 +124,7 @@ const ContactSection = () => {
               <a
                 href="https://linkedin.com/in/daniyal-saqib-012142335"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="hover:text-gold transition-colors"
               >
                 LinkedIn
@@ -133,7 +133,7 @@ const ContactSection = () => {
               <a
                 href="https://github.com/daniyalsaqib"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="hover:text-gold transition-colors"
               >
                 GitHub
